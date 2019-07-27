@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">statOps</string>
+    <string-array name="league_options">
+        <item>MLB</item>
+        <item>NFL</item>
+        <item>NBA</item>
+    </string-array>
+    <string name="away_team_logo">Away team logo</string>
+    <string name="home_team_logo">Home team logo</string>
+    <string name="away_team_name">Yankees </string>
+    <string name="home_team_name">Red Sox </string>
+    <string name="home_record">(58-47)</string>
+    <string name="away_record">(66-37)</string>
+    <string name="home_probability">58%</string>
+    <string name="away_probability">42%</string>
+</resources>
