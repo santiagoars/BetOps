@@ -16,12 +16,14 @@ class Stat_Scraper:
            with open (self.scriptName+'.txt', 'w') as r:
                for row in stats.find_all('tr', class_ = ['rgRow', 'rgAltRow']):
                    for cell in row.find_all('td'):
-                       print(cell.text.ljust(20))
                        r.write(cell.text.ljust(20));
                    r.write('\n');
 
-sS= Stat_Scraper('https://www.fangraphs.com/leaders.aspx?pos=all&stats=rel&lg=all&qual=0&type=8&season=2019&month=0&season1=2019&ind=0&team=0,ts&rost=0&age=0&filter=&players=0',"BullPenStats")
+sS= Stat_Scraper('https://www.fangraphs.com/leaders.aspx?pos=all&stats=rel&lg=all&qual=0&type=8&season=2019&month=0&season1=2019&ind=0&team=0,ts&rost=0&age=0&filter=&players=0',"BullpenStats")
 sS.createScript()
 
-starterStats=Stat_Scraper('https://www.fangraphs.com/leaders.aspx?pos=all&stats=pit&lg=all&qual=10&type=8&season=2019&month=0&season1=2019&ind=0&team=0&rost=0&age=0&filter=&players=p2019-09-04&startdate=&enddate=',"StarterStats")
+starterStats= Stat_Scraper('https://www.fangraphs.com/leaders.aspx?pos=all&stats=pit&lg=all&qual=10&type=8&season=2019&month=0&season1=2019&ind=0&team=0&rost=0&age=0&filter=&players=p2019-09-04&startdate=&enddate=',"StarterStats")
 starterStats.createScript()
+
+offenseStats = Stat_Scraper("https://www.fangraphs.com/leaders.aspx?pos=all&stats=bat&lg=all&qual=0&type=8&season=2019&month=0&season1=2019&ind=0&team=0,ts&rost=&age=&filter=&players=0", "OffenseStats")
+offenseStats.createScript()
